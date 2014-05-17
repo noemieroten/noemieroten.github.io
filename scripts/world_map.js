@@ -1,4 +1,4 @@
-var width = 630,
+var width = 580,
 height = 480;
 
 var projection = d3.geo.mercator()

@@ -1,7 +1,5 @@
-var width = 640,
+var width = 630,
 height = 480;
-
-
 
 var projection = d3.geo.mercator()
     .scale((width + 1) / 1.6 / Math.PI)

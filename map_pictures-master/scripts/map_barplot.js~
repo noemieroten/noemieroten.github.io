@@ -1,0 +1,88 @@
+$(function(){
+
+  var margin = {top: 20, right: 20, bottom: 30, left: 150},
+  width = Math.min(960, innerWidth*0.75) - margin.left - margin.right,
+  height = Math.min(500, innerHeight*0.75) - margin.top - margin.bottom;
+
+  var x = d3.scale.linear()
+    .range([0, width]);
+
+  var y = d3.scale.ordinal()
+    .rangeRoundBands([0, height], .1);
+
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+  var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+  var svg = d3.select("#svgGroupBarPlot")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr("fill", "white")
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+  d3.csv("data/hardskills.csv", type, function(error, data) {
+
+    x.domain([0, 100]);
+    y.domain(data.map(function(d) { return d.subject; }));
+    console.log(data);
+
+    svg.append("g")
+      .attr("class", "x axis")
+      .attr("id", "hard-skill-axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+      .append("text")
+      .attr("x", x(100))
+      .attr("dy", "-1em")
+      .style("text-anchor", "end")
+      .text("Perceived proefficency");
+
+    svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 1)
+      .attr("dy", "1em")
+      .style("text-anchor", "start")
+      .text("Skill")
+
+    svg.selectAll(".bar")
+      .data(data)
+      .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return 0; })
+      .attr("height", y.rangeBand())
+      .attr("y", function(d) { return y(d.subject); })
+      .attr("width", function(d) { return x(d.level); });
+
+    var tooltipHs = d3.select("body")
+	    .append("div")
+      .attr("class", "d3-tip")
+	    .style("position", "absolute")
+	    .style("z-index", "10")
+	    .style("visibility", "hidden");
+    
+  addToolTip(svg.selectAll(".bar"));
+  function addToolTip(g){
+    g.on("mouseover", 
+         function(d){
+           htmlText = '<font color="red">' + d.subject + "</font><br>" + d.desc;
+           tooltipHs.html(htmlText);      
+           return tooltipHs.style("visibility", "visible");})
+	    .on("mousemove", function(){return tooltipHs.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+	    .on("mouseout", function(){return tooltipHs.style("visibility", "hidden");})
+    }
+  });
+
+  function type(d) {
+    d.frequency = +d.frequency;
+    return d;
+  }
+});
+

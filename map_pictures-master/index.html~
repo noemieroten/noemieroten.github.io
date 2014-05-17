@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script src="scripts/d3.v3.min.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <!-- <link type="text/css" rel="stylesheet" href="style.css"/> -->
+    <title> Try Plot this </title>
+    <!-- Photo Slides inside the webpage -->
+    <script src="js/jquery.flexslider-min.js"></script>
+	<link rel="stylesheet" href="css/flexslider.css" />     
+    <!-- Color as in colorbrewer -->
+	<link rel="stylesheet" href="css/colorbrewer.css" />
+    <!-- Usefule for the tooltip -->
+    <link rel="stylesheet" href="css/d3-style.css" />
+
+    <style type="text/css">     
+
+.node circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text{
+  font-size: 11px;
+  font-color: #000;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+#pictureSlider {
+  width:640px;
+  height:480px;
+}
+
+.land {
+  fill: #000;
+  hover: rgb(217, 17, 17);
+}
+
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+.city {
+  fill: rgba(255, 255, 255, 1);
+  stroke: red;
+  stroke-width: 2;
+}
+
+rect {
+    fill: none;
+    pointer-events: all;
+}
+
+#svgOmgHearts {
+    background: #000;
+}
+
+
+svg {margin-left:auto; margin-right: auto;} <!-- display: block;} -->
+.divCentered {margin-left:auto; margin-right: auto; display: block;}
+
+#wrap  {
+  width: 1280;
+  margin:0 auto;
+  text-align:center;
+}
+
+.wrap_li {
+ display:inline-block
+}
+
+    </style>
+    <!-- <script data-main="scripts/main" src="scripts/require.js"></script> -->
+  </head>
+  <body>
+    <div id="body">
+      <div id="footer">
+        d3.layout.tree
+        <div class="hint">click or option-click to expand or collapse</div>
+      </div>
+    </div>
+
+   <svg height=0></svg>
+   <div id="wrap" style="margin:0 auto; text-algin:center"> 
+     <div width="480px" height="500px" 
+          style="display:inline-block;">
+       <svg id="worldMap" style='background:rgb(120, 120, 255)'></svg>
+     </div>
+     <div width="480px" height="500px" 
+          style="display:inline-block">
+       <div id="sliderDiv">
+         <div id="pictureSlider" class="flexslider">
+		   <ul class="slides">
+		     <li>
+			   <img  src="data/pictures/Geneva/01.jpg"/>
+		     </li>
+           </ul>
+         </div>
+       </div>
+       </div>
+       
+     </div>
+   </div>
+
+   <div> End of page </div>
+   <script type="text/javascript" src="js/slider.js"></script>
+   <script type="text/javascript" src="scripts/world_map.js"></script>
+  </body>
+</html>

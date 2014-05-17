@@ -1,0 +1,74 @@
+{
+    "nodes": [
+        {"name": "R", "xp" : 5, "value": 1, "packages": "ggplot2, data.table, simsalapar, parallel, plyr, reshape2, fasttime, xts, base::stats",
+         "projects": "data visualiazations, statistical learning and inference, reporting, webscrapper, data cleaning",
+         "level": "Approximatively the level of the book Advanced R programming",
+         "levelUrl" : "http://adv-r.had.co.nz/"
+        },
+        {"name": "Python", "xp" : 3, "value" : 2, "packages":
+         "pandas, numpy, re, os",
+         "projects": "numerical computations and simulations, data wranging and cleaning, productivity enhancement",
+         "level": "Python for Data Analysis (McKimney) and CS212 from Udacity (taught by Peter Novig)",
+         "levelUrl" : "https://www.udacity.com/course/cs212"
+        },
+        {"name": "VBA/Excel", "xp" : 2, "value": 3,
+         "projects": "risk management, simulations though macro, speed up programs",
+         "level":  "Advanced Modelling in Finance using Excel and VBA by Jackson and Staunton",
+         "levelUrl": "http://eu.wiley.com/WileyCDA/WileyTitle/productCd-0471499226.html"
+        },
+        {"name": "C++", "xp" : 1, "value": 4, "projects": "Speed up R code",
+         "packages": "cuda, thrust",
+         "level":  "Read and done most of the exercises of the books: C++ par la pratique and Programmation orientée objets en C++",
+         "levelUrl": "http://www.ppur.org/produit/110/9782880745042/Programmation%20orientee%20objets%20en%20C++%20"
+        },
+        {"name": "d3.js", "xp" : 0.5, "value": 5, "projects": "interactive data visualization",
+         "level":  "Interactive Data Visualization for the Web with Scott Murray",
+         "levelUrl": "http://chimera.labs.oreilly.com/books/1230000000345"
+        },
+        {"name": "SQL", "xp" : 0.5, "value": 6, "projects": "Looking up data from in-house databases",
+         "level": "Completed the tutorials of sqlzoo.net",
+         "levelUrl": "http://sqlzoo.net/wiki/Main_Page"
+        },
+        {"name": "LaTeX", "xp" : 3, "value": 7, "projects": "Risk management reports, thesis, presentations on slides, cv",
+         "level": "Ability to write all sorts of TeX documents in various format"
+        }        
+    ],
+    "links":[
+        {"source": 1, "target": 0, "value": 1, 
+         "link": 
+         "<font color='red'> RPy, RCppCNPy, pandas </font> allows seamless transitions between R and Python "
+        },
+        {"source": 2, "target": 0, "value": 1,
+         "link": 
+         "<font color='red'>XLConnect</font> transfer data from Excel to R."
+        },
+        {"source": 2, "target": 1, "value": 3,
+         "link": 
+         "<font color='red'>xlrd</font> and <font color='red'>xlwt</font> allow Python to read/write Excel files."
+        },
+        {"source": 3, "target": 0, "value": 5,
+         "link": 
+         "<font color='red'>Rcpp</font> allows a seamless transition betwxeen C++ and R."
+        },
+        {"source": 4, "target": 0, "value": 5,
+         "link": 
+         "The <font color='red'>rCharts</font>and <font color='red'>shiny</font>  packages allow to write HTML5 data visualization.<hr/>The <font color='red'>XML</font> package provides a fast tool to study HTML pages."
+        },
+        {"source": 5, "target": 0, "value": 1,
+         "link": 
+         "<font color='red'>RODBC</font> allows R to read Microsoft Access and Microsoft SQL databases"
+        },
+        {"source": 5, "target": 1, "value": 1,
+         "link": 
+         "<font color='red'>pandas</font>, <font color='red'>sqlite3</font> allow Python to read sql databases"
+        },
+        {"source": 6, "target": 0, "value": 1,
+         "link": 
+         "<font color='red'>xtable</font> and <font color='red'>simsalapar</font> packages allows to export dataframe in LaTeX"
+        },
+        {"source": 6, "target": 1, "value": 2,
+         "link": 
+         "Python has functions for working effectively with strings, therefore modify LaTeX files"
+        }        
+]
+}

@@ -1,102 +1,1 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <script src="scripts/d3.v3.min.js"></script>
-    <script src="scripts/jquery.min.js"></script>
-    <script src="http://d3js.org/queue.v1.min.js"></script>
-    <script src="http://d3js.org/topojson.v1.min.js"></script>
-
-    <title> World Map Pictures </title>
-    <!-- Photo Slides inside the webpage -->
-    <script src="js/jquery.flexslider-min.js"></script>
-	
- <link rel="stylesheet" href="css/mystyle.css" />
-	
-	
-	<link rel="stylesheet" href="css/flexslider.css" />     
-	<link rel="stylesheet" href="css/colorbrewer.css" />
-    <link rel="stylesheet" href="css/d3-style.css" />
-
-    <style type="text/css">     
-
-#pictureSlider {
-  width:640px;
-  height:480px;
-}
-
-.land {
-  fill: rgb(200, 200, 200);
-  hover: rgb(217, 17, 17);
-}
-
-.boundary {
-  fill: none;
-  stroke: #fff;
-  stroke-width: .5px;
-}
-
-.city {
-  fill: rgba(255, 255, 255, 1);
-  stroke: red;
-  stroke-width: 1;
-}
-
-svg {margin-left: auto; margin-right: auto;}
-
-#wrap  {
-  width: auto;
-  margin:0 auto;
-  text-align:center;
-  border: 1px solid;
-}
-
-.wrap_li {
- display:inline-block
-}
-
-    </style>
-  </head>
-  <body>
-
-<table align="center" border="0" cellspacing="10" bgcolor="#084B8A">
-<tr>
-<td colspan="2">
-
-
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;Travel Memories</h1>
-        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work in progress... always</h2>
-        
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-       <svg id="worldMap" style='background:#084B8A'></svg>
-
-</td>
-<td  valign="top">	 
-       <div id="sliderDiv">
-         <div id="pictureSlider" class="flexslider">
-		   <ul class="slides">
-		     <li>
-			   <img  src="data/pictures/Geneva/01.jpg"/>
-		     </li>
-           </ul>
-         </div>
-       </div>
-
-</td>
-</tr>
-</table>
-
-
-   <script type="text/javascript" src="js/slider.js"></script>
-   <script type="text/javascript" src="scripts/world_map.js"></script>
-  </body>
-</html>
+<!DOCTYPE html><html><head><title>Travel Memories - Noemie Roten</title>    <script src="scripts/d3.v3.min.js"></script>    <script src="scripts/jquery.min.js"></script>    <script src="http://d3js.org/queue.v1.min.js"></script>    <script src="http://d3js.org/topojson.v1.min.js"></script>    <script src="js/jquery.flexslider-min.js"></script><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<link rel="stylesheet" href="css/flexslider.css" />     	<link rel="stylesheet" href="css/colorbrewer.css" />    <link rel="stylesheet" href="css/d3-style.css" />    <style type="text/css">     #pictureSlider {  width:640px;  height:480px;}.land {  fill: rgb(200, 200, 200);  hover: rgb(217, 17, 17);}.boundary {  fill: none;  stroke: #fff;  stroke-width: .5px;}.city {  fill: rgba(255, 255, 255, 1);  stroke: red;  stroke-width: 1;}svg {margin-left: auto; margin-right: auto;}#wrap  {  width: auto;  margin:0 auto;  text-align:center;  border: 1px solid;}.wrap_li { display:inline-block}    </style></head><body bgcolor="#ffffff"><br><center><table style="display: inline-table;" border="0" cellpadding="0" cellspacing="0" width="1417">  <tr>   <td colspan="5">		<img name="nor_website_r1_c1" src="images/nor_website_r1_c1.png" width="1417" height="294" border="0" id="nor_website_r1_c1" alt="" /></td>  </tr>    <tr>   <td rowspan="2" valign="top">		<img name="nor_website_r2_c1" src="images/nor_website_r2_c1.png" width="52" height="567" border="0" id="nor_website_r2_c1" alt="" /></td>   <td valign="top">       <div id="sliderDiv">         <div id="pictureSlider" class="flexslider">		   <ul class="slides">		     <li>			   <img  src="data/pictures/Geneva/01.jpg"/>		     </li>           </ul>         </div>       </div>      <td rowspan="2" valign="top">		<img name="nor_website_r2_c3" src="images/nor_website_r2_c3.png" width="16" height="567" border="0" id="nor_website_r2_c3" alt="" /></td>   <td valign="top">   <svg id="worldMap" style='background:#FFFFFF'></svg>		   <td rowspan="2" valign="top">		<img name="nor_website_r2_c5" src="images/nor_website_r2_c5.png" width="65" height="567" border="0" id="nor_website_r2_c5" alt="" /></td>  </tr>  <tr>   <td><img name="nor_website_r3_c2" src="images/nor_website_r3_c2.png" width="642" height="85" border="0" id="nor_website_r3_c2" alt="" /></td>   <td><img name="nor_website_r3_c4" src="images/nor_website_r3_c4.png" width="642" height="85" border="0" id="nor_website_r3_c4" alt="" /></td>  </tr></table></center>   <script type="text/javascript" src="js/slider.js"></script>   <script type="text/javascript" src="scripts/world_map.js"></script></body></html>
